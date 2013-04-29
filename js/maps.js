@@ -26,7 +26,11 @@ Map.displayMap = function(userPosition, carPosition)
       overviewMapControl: true,
       navigationControl: true,
       center: userLatLng,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
+      mapTypeId: google.maps.MapTypeId.SATELLITE,
+      zoomControlOptions: {
+    	          position: google.maps.ControlPosition.TL,
+    	        style: google.maps.ZoomControlStyle.SMALL
+    	      }
       
    }
 
