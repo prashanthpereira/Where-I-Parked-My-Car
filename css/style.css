@@ -25,6 +25,6 @@ dl.informations dt
 }
 
 input.ui-slider-input {
-    disabled:disabled !important;
+    display:none !important;
 }
 

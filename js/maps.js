@@ -16,11 +16,11 @@ Map.displayMap = function(userPosition, carPosition)
       carLatLng = new google.maps.LatLng(carPosition.position.latitude, carPosition.position.longitude);
 
    var options = {
-      zoom: 20,
-      disableDefaultUI: true,
+      zoom: 30,
+      //disableDefaultUI: true,
       streetViewControl: true,
       center: userLatLng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.SATELLITE
    }
 
    var map = new google.maps.Map(document.getElementById('map'), options);
@@ -42,7 +42,7 @@ Map.displayMap = function(userPosition, carPosition)
       map: map,
       fillColor: '#70E7FF',
       fillOpacity: 0.2,
-      strokeColor: '#0000FF',
+      strokeColor: '#FFFFFF',
       strokeOpacity: 1.0
    });
    map.fitBounds(circle.getBounds());
@@ -61,7 +61,7 @@ Map.displayMap = function(userPosition, carPosition)
          map: map,
          fillColor: '#70E7FF',
          fillOpacity: 0.2,
-         strokeColor: '#0000FF',
+         strokeColor: '#FFFFFF',
          strokeOpacity: 1.0
       });
 
