@@ -16,7 +16,7 @@ Map.displayMap = function(userPosition, carPosition)
       carLatLng = new google.maps.LatLng(carPosition.position.latitude, carPosition.position.longitude);
 
    var options = {
-      zoom: 30,
+      zoom: 20,
       disableDefaultUI: true,
       panControl: false,
       zoomControl: true,
@@ -48,7 +48,7 @@ Map.displayMap = function(userPosition, carPosition)
       radius: userPosition.coords.accuracy,
       map: map,
       fillColor: '#70E7FF',
-      fillOpacity: 0.2,
+      fillOpacity: 0.1,
       strokeColor: '#FFFFFF',
       strokeOpacity: 1.0
    });
@@ -67,7 +67,7 @@ Map.displayMap = function(userPosition, carPosition)
          radius: carPosition.position.accuracy,
          map: map,
          fillColor: '#70E7FF',
-         fillOpacity: 0.2,
+         fillOpacity: 0.1,
          strokeColor: '#FFFFFF',
          strokeOpacity: 1.0
       });
