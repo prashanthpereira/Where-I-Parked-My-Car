@@ -33,8 +33,16 @@ Map.displayMap = function(userPosition, carPosition)
     	      }
       
    }
+   
+   var infoWindowContent = [
+                            "<b>Get Directions >> </b><br />",
+                            "<form id='map-form'>",
+                            "<input type='submit' id='map-go' value='Go' />",
+                            "</form>"
+                        ].join("");
+   
    var infowindow = new google.maps.InfoWindow({
-	    content: "Get Directions"
+	    content: infoWindowContent
 	    });
    
    var map = new google.maps.Map(document.getElementById('map'), options);
@@ -43,13 +51,17 @@ Map.displayMap = function(userPosition, carPosition)
       map: map,
       title: 'Your position'
    });
+   
+   google.maps.event.addListener(info, 'domready', function() {
+	    document.id("map-form").addEvent("submit", function(e) {
+	       /* e.stop();
+	        console.log("hi!");*/
+	    	 $.mobile.changePage('directions.html');
+	    });
+	});
+   
    google.maps.event.addListener(marker, 'click', function() {
-	   navigator.notification.alert(
-	           'Get Directions?',
-	           function(){},
-	           'Info'
-	        ); 
-	   $.mobile.changePage('directions.html');
+	   infoWindow.open(map, marker);
 	 });
    
   
