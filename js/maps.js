@@ -33,13 +33,27 @@ Map.displayMap = function(userPosition, carPosition)
     	      }
       
    }
-
+   var infowindow = new google.maps.InfoWindow({
+	    content: "Get Directions"
+	    });
+   
    var map = new google.maps.Map(document.getElementById('map'), options);
    var marker = new google.maps.Marker({
       position: userLatLng,
       map: map,
       title: 'Your position'
    });
+   google.maps.event.addListener(marker, 'click', function() {
+	   navigator.notification.alert(
+	           'Get Directions?',
+	           function(){},
+	           'Info'
+	        ); 
+	   $.mobile.changePage('directions.html');
+	 });
+   
+  
+   
    // If carLatLng is null means that the function has been called when the
    // user set his current position and that is when he parked the car so the
    // icon will be shown accordingly.
