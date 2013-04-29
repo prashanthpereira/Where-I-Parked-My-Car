@@ -18,14 +18,19 @@ Map.displayMap = function(userPosition, carPosition)
    var options = {
       zoom: 30,
       disableDefaultUI: true,
-      panControl: true,
+      panControl: false,
       zoomControl: true,
-      mapTypeControl: true,
+      mapTypeControl: false,
       scaleControl: true,
       streetViewControl: true,
       overviewMapControl: true,
+      navigationControl: true,
       center: userLatLng,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
+      mapTypeId: google.maps.MapTypeId.SATELLITE,
+      zoomControlOptions: {
+          position: google.maps.ControlPosition.TL,
+          style: google.maps.ZoomControlStyle.SMALL
+      }
    }
 
    var map = new google.maps.Map(document.getElementById('map'), options);
