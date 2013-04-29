@@ -18,20 +18,20 @@
          $(document).one('deviceready', initApplication);
       </script>
    </head>
+   <br><br><br>
    <body>
       <div id="welcome-page" data-role="page">
          <header data-role="header">
             <h1>Easy Park</h1>
          </header>
-         <div id="content" data-role="content">
-            <a href="map.html?requestType=set" id="set-car-position" data-role="button">Set position</a>
+         <div id="content" data-role="controlgroup">
+            <a href="map.html?requestType=set" id="set-car-position" style="vertical-align: middle;" date-corners="false" data-role="button">Set position</a>
+			<a href="map.html?requestType=quick" id="quick-search" data-role="button">Quick Search</a>
             <a href="map.html?requestType=get" id="find-car" data-role="button">Find car</a>
-            <a href="positions.html" id="positions-history" data-role="button">Positions history</a>
+            <a href="positions.html" id="positions-history" data-role="button">Parking History</a>
+			<a href="settings.html" id="settings" data-role="button" >Settings</a>
          </div>
-         <footer data-role="footer">
-           <!--  <h3>Created by Aurelio De Rosa</h3>
-            <a href="aurelio.html" data-icon="info" data-iconpos="notext" class="ui-btn-right">Credits</a> -->
-         </footer>
+         
       </div>
    </body>
 </html>

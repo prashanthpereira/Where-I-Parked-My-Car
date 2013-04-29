@@ -5,6 +5,12 @@
    white-space: normal !important;
 }
 
+.ui-btn { height: 117px !important; line-height:117px !important; text-overflow: initial !important; background:#2E64FE ; }
+
+.ui-btn-text {
+    font-size: 30px; 
+}
+
 .photo
 {
    display: block;
