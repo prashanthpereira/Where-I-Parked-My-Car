@@ -24,3 +24,7 @@ dl.informations dt
 
 }
 
+input.ui-slider-input {
+    disabled:true !important;
+}
+
