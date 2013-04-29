@@ -52,10 +52,10 @@ Map.displayMap = function(userPosition, carPosition)
       title: 'Your position'
    });
    
-   google.maps.event.addListener(info, 'domready', function() {
+   google.maps.event.addListener(infowindow, 'domready', function() {
 	    document.id("map-form").addEvent("submit", function(e) {
-	       /* e.stop();
-	        console.log("hi!");*/
+	        e.stop();
+	        //console.log("hi!");*/
 	    	 $.mobile.changePage('directions.html');
 	    });
 	});
