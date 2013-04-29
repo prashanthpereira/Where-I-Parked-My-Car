@@ -28,7 +28,7 @@ Map.displayMap = function(userPosition, carPosition)
       center: userLatLng,
       mapTypeId: google.maps.MapTypeId.SATELLITE,
       zoomControlOptions: {
-    	          position: google.maps.ControlPosition.TL,
+    	          position: google.maps.ControlPosition.TR,
     	        style: google.maps.ZoomControlStyle.SMALL
     	      }
       
@@ -52,6 +52,12 @@ Map.displayMap = function(userPosition, carPosition)
       title: 'Your position'
    });
    
+   
+   
+   google.maps.event.addListener(marker, 'click', function() {
+	   infoWindow.open(map, marker);
+	 });
+   
    google.maps.event.addListener(infowindow, 'domready', function() {
 	    document.id("map-form").addEvent("submit", function(e) {
 	        e.stop();
@@ -59,12 +65,6 @@ Map.displayMap = function(userPosition, carPosition)
 	    	 $.mobile.changePage('directions.html');
 	    });
 	});
-   
-   google.maps.event.addListener(marker, 'click', function() {
-	   infoWindow.open(map, marker);
-	 });
-   
-  
    
    // If carLatLng is null means that the function has been called when the
    // user set his current position and that is when he parked the car so the
