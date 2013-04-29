@@ -17,9 +17,24 @@
     		<input type="range" name="slider" id="slider" min="0" max="5" value="2">
     		<br>
     		<br>
+			<fieldset data-role="controlgroup">
+				<legend>Search parking spots based on</legend>
+				<input type="radio" name="radio-choice" id="radio-choice-1"
+					value="choice-1" checked="checked" /> <label for="radio-choice-1">Nearness</label>
+
+				<input type="radio" name="radio-choice" id="radio-choice-2"
+					value="choice-2" /> <label for="radio-choice-2">Price</label>
+
+
+			</fieldset>
+			<br>
     		<br>
     		<br>
-    		<a href="index.html" data-role="button">Done</a>
+    		<a href="index.html" data-role="button" style="font-size: 15pt; height:70px; line-height:70px; text-overflow: initial; vertical-align: middle;">Go to home screen</a>
+    		<br>
+    		<br>
+    		<br>
+    		<a href="map.html?requestType=quick" id="quick-search" style="font-size: 15pt; height:70px; line-height:70px; text-overflow: initial;vertical-align: middle;" data-corners="false" data-role="button">Quick Search</a>
          </div>
 
       </div>
