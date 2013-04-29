@@ -17,8 +17,13 @@ Map.displayMap = function(userPosition, carPosition)
 
    var options = {
       zoom: 30,
-      //disableDefaultUI: true,
+      disableDefaultUI: true,
+      panControl: true,
+      zoomControl: true,
+      mapTypeControl: true,
+      scaleControl: true,
       streetViewControl: true,
+      overviewMapControl: true,
       center: userLatLng,
       mapTypeId: google.maps.MapTypeId.SATELLITE
    }
