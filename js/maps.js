@@ -42,7 +42,7 @@ Map.displayMap = function(userPosition, carPosition)
    var infoWindowContent = [
                             "<b>Get Directions >> </b><br />",
                             "<form id='map-form'>",
-                            "<input type='submit' id='map-go' value='Go' action='directions.html' />",
+                            "<input type='submit' id='map-go' value='Go' />",
                             "</form>"
                         ].join("");
    
@@ -54,12 +54,13 @@ Map.displayMap = function(userPosition, carPosition)
 	   infoWindow.open(map, marker);
 	 });
    
-   google.maps.event.addListener(infowindow, 'domready', function() {
-	    //document.id("map-form").addEvent("submit", function(e) {
-	        //e.stop();
+   google.maps.event.addListener(infowindow, 'domready', function(f) {
+	   f.stop();
+	    document.id("map-form").addEvent("submit", function(e) {
+	        e.stop();
 	        //console.log("hi!");*/
-	    	// $.mobile.changePage('directions.html');
-	   // });
+	    	$.mobile.changePage('directions.html');
+	    });
 	});
 	
    
