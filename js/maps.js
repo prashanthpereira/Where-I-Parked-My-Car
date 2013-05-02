@@ -37,7 +37,7 @@ Map.displayMap = function(userPosition, carPosition)
    var infoWindowContent = [
                             "<b>Get Directions >> </b><br />",
                             "<form id='map-form'>",
-                            "<input type='submit' id='map-go' value='Go' />",
+                            "<input type='submit' id='map-go' value='Go' action='directions.html' />",
                             "</form>"
                         ].join("");
    
@@ -62,7 +62,7 @@ Map.displayMap = function(userPosition, carPosition)
 	    document.id("map-form").addEvent("submit", function(e) {
 	        e.stop();
 	        //console.log("hi!");*/
-	    	 $.mobile.changePage('directions.html');
+	    	// $.mobile.changePage('directions.html');
 	    });
 	});
    
