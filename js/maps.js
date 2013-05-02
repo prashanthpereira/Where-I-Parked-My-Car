@@ -33,7 +33,12 @@ Map.displayMap = function(userPosition, carPosition)
     	      }
       
    }
-   
+   var map = new google.maps.Map(document.getElementById('map'), options);
+   var marker = new google.maps.Marker({
+      position: userLatLng,
+      map: map
+     // title: 'Your position'
+   }); 
    var infoWindowContent = [
                             "<b>Get Directions >> </b><br />",
                             "<form id='map-form'>",
@@ -41,30 +46,22 @@ Map.displayMap = function(userPosition, carPosition)
                             "</form>"
                         ].join("");
    
-   var infowindow = new google.maps.InfoWindow({
-	    content: infoWindowContent
+   var infoWindow = new google.maps.InfoWindow({
+	    content: "Hello"
 	    });
-   
-   var map = new google.maps.Map(document.getElementById('map'), options);
-   var marker = new google.maps.Marker({
-      position: userLatLng,
-      map: map,
-      title: 'Your position'
-   });
-   
-   
-   
+    
    google.maps.event.addListener(marker, 'click', function() {
 	   infoWindow.open(map, marker);
 	 });
    
    google.maps.event.addListener(infowindow, 'domready', function() {
-	    //document.id("map-form").addEvent("submit", function(e) {
+	    document.id("map-form").addEvent("submit", function(e) {
 	        //e.stop();
 	        //console.log("hi!");*/
 	    	 $.mobile.changePage('directions.html');
-	   // });
+	    });
 	});
+	
    
    // If carLatLng is null means that the function has been called when the
    // user set his current position and that is when he parked the car so the
