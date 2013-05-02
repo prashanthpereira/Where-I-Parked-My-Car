@@ -47,7 +47,7 @@ Map.displayMap = function(userPosition, carPosition)
                         ].join("");
    
    var infoWindow = new google.maps.InfoWindow({
-	    content: "Hello"
+	    content: infoWindowContent
 	    });
     
    google.maps.event.addListener(marker, 'click', function() {
@@ -55,11 +55,11 @@ Map.displayMap = function(userPosition, carPosition)
 	 });
    
    google.maps.event.addListener(infowindow, 'domready', function() {
-	    document.id("map-form").addEvent("submit", function(e) {
+	    //document.id("map-form").addEvent("submit", function(e) {
 	        //e.stop();
 	        //console.log("hi!");*/
-	    	 $.mobile.changePage('directions.html');
-	    });
+	    	// $.mobile.changePage('directions.html');
+	   // });
 	});
 	
    
