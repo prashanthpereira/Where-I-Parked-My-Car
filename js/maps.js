@@ -55,6 +55,9 @@ Map.displayMap = function(userPosition, carPosition)
 	  /* $(".clickeventvialive").bind("click", function (){		  
 		   $.mobile.changePage('directions.html');
 		   });*/
+	   $('.clickeventvialive').click( function() { 
+	        $.mobile.changePage($('#page-map'), {});
+	    });
 	 });
    
   

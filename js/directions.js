@@ -15,9 +15,7 @@ var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
 	              'animation' : google.maps.Animation.DROP 
 	            });                                                                                                                                                                                                                
 	    });*/
-    $('#map-go').click( function() { 
-        $.mobile.changePage($('#page-map'), {});
-    });
+   
 
 
 
