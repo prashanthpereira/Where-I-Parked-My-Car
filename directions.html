@@ -1,64 +1,48 @@
 <!DOCTYPE html>
 <html>
  <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
       <title>Directions</title>
+    	<link rel="stylesheet" href="mapapp.css" type="text/css">
     
-    <style>
-      #directions-panel {
-        height: 100%;
-        float: right;
-        width: 390px;
-        overflow: auto;
-      }
-
-      #map-canvas {
-        margin-right: 400px;
-      }
-
-      #control {
-        background: #fff;
-        padding: 5px;
-        font-size: 14px;
-        font-family: Arial;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-        display: none;
-      }
-
-      @media print {
-        #map-canvas {
-          height: 500px;
-          margin: 0;
-        }
-
-        #directions-panel {
-          float: none;
-          width: auto;
-        }
-      }
-    </style>
+   
    <!--  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> -->
-    <script>
-
-    </script>
+   
   </head>
   
   <body>
-   <div id="directions-page" data-role="page">
-         <header data-role="header">
-            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
-            <h1>Directions</h1>
-         </header>
-         
-         <div id="content" data-role="content">
-         </div>
-      
-    <div id="control">
-    </div>
-    <div id="directions-panel"></div>
-    <div id="map-canvas"></div>
-    </div>
+  <div data-role="page" data-theme="c" data-fullscreen="true" id="page-map">
+
+	<div data-role="content" id="map-content">
+		<div id="map_canvas"></div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d" data-position="fixed">
+	<div data-role="navbar">
+	<ul>
+    	<li><a href="#page-home">Home</a></li>
+    	<li><a href="#page-map" class="refresh">Refresh</a></li>
+    	<li><a href="#page-dir">Directions</a></li>
+	</ul>
+	</div><!-- /navbar -->
+	</div><!-- /footer -->
+	</div><!-- /page-map -->
+
+	<div data-role="page" data-theme="c" data-fullscreen="true" id="page-dir">
+
+	<div data-role="content">
+		<div id="dir_panel"></div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+    	<li><a href="#page-home">Home</a></li>
+    	<li><a href="#page-map">Map</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /footer -->
+	</div><!-- /page-dir -->
   </body>
 </html>
