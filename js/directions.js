@@ -33,6 +33,7 @@ function fadingMsg (locMsg) {
 
 //Create the map then make 'displayDirections' request
 $('#page-map').live("pageinit", function() {
+	fadingMsg("page-map loaded !");
     $('#map_canvas').gmap({'center' : mapdata.destination, 
         'mapTypeControl' : true, 
         'navigationControl' : true,
