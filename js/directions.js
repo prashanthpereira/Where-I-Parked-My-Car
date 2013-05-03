@@ -2,7 +2,7 @@ var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
 
 
 //Home page
-$('#page-home').live("pageinit", function() {
+/*$('#page-home').live("pageinit", function() {
 fadingMsg("before map-square");
 	$('#map_square').gmap(
 	    { 'center' : mapdata.destination, 
@@ -21,7 +21,7 @@ fadingMsg("before map-square");
 	 fadingMsg("before page-map");
      $.mobile.changePage($('#page-map'), {});
  });
-});
+});*/
 
 function fadingMsg (locMsg) {
  $("<div class='ui-overlay-shadow ui-body-e ui-corner-all fading-msg'>" + locMsg + "</div>")
