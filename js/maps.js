@@ -1,4 +1,10 @@
 var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
+$('#map-page').live("pageinit", function() {
+	
+    $('#map-go').click( function() { 
+        $.mobile.changePage($('#page-map'), {});
+    });
+});
 function Map()
 {
 }
@@ -52,11 +58,12 @@ Map.displayMap = function(userPosition, carPosition)
 	    });
    google.maps.event.addListener(marker, 'click', function() {
 	   infowindow.open(map, marker);
+	  /* $(".clickeventvialive").bind("click", function (){		  
+			 //  $.mobile.changePage('directions.html');
+			   $.mobile.changePage($('#page-map'), {});
+			   });*/
 	 });
-   $(".clickeventvialive").bind("click", function (){		  
-		 //  $.mobile.changePage('directions.html');
-		   $.mobile.changePage($('#page-map'), {});
-		   });
+  
    
    
   
