@@ -50,8 +50,9 @@ $('#page-map').live("pageshow", function() {
 
 // Request display of directions, requires jquery.ui.map.services.js
 var toggleval = true; // used for test case: static locations
-$('.refresh').live("tap", function() {
-    
+//$('.refresh').live("tap", function() {
+$('#page-dir').live("pageinit", function() {  
+	alert("page-dir init");
             // START: Tracking location with device geolocation
         /*   if ( navigator.geolocation ) { 
                 fadingMsg('Using device geolocation to get current position.');
@@ -111,12 +112,12 @@ $('.refresh').live("tap", function() {
 });
 
 // Go to map page to see instruction detail (zoom) on map page
-$('#dir_panel').live("tap", function() {
+/*$('#dir_panel').live("tap", function() {
     $.mobile.changePage($('#page-map'), {});
-});
+});*/
 
 // Briefly show hint on using instruction tap/zoom
-$('#page-dir').live("pageshow", function() {
+/*$('#page-dir').live("pageshow", function() {
     fadingMsg("Tap any instruction<br/>to see details on map");
-});
+});*/
 
