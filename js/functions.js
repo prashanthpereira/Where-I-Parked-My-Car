@@ -70,7 +70,7 @@ function initApplication()
          };
          var position = new Position();
 
-         $.mobile.loading('show');
+         //$.mobile.loading('show');
          // If the parameter requestType is 'set', the user wants to set
          // his car position else he want to retrieve the position
          if (requestType == 'set')

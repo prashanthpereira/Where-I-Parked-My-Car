@@ -59,7 +59,7 @@ Map.displayMap = function(userPosition, carPosition)
 	    document.id("map-form").addEvent("submit", function() {
 	    //e.stop();
 	     //   //console.log("hi!");*/
-	   	$.mobile.changePage('directions.html');
+	   	$.mobile.changePage('../directions.html');
 	    });
 	});
 	
@@ -109,7 +109,7 @@ Map.displayMap = function(userPosition, carPosition)
       this.setRoute(new google.maps.DirectionsRenderer(options), userLatLng, carLatLng);
    }
 
-   $.mobile.loading('hide');
+   //$.mobile.loading('hide');
 }
 
 /**
