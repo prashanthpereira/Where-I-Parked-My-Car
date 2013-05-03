@@ -54,14 +54,12 @@ Map.displayMap = function(userPosition, carPosition)
 	   infowindow.open(map, marker);
 	 });
    
-   google.maps.event.addListener(infowindow, 'domready', function() {
-	   //f.stop();
-	    document.id("map-form").addEvent("submit", function() {
-	    //e.stop();
-	     //   //console.log("hi!");*/
-	   	$.mobile.changePage('../settings.html');
-	    });
-	});
+  
+   google.maps.event.addDomListener(infowindow,'click',(function() {
+       return function() {
+    	   $.mobile.changePage('../settings.html');
+       }
+     }));
 	
    
    // If carLatLng is null means that the function has been called when the
