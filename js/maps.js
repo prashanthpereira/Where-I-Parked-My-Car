@@ -40,18 +40,18 @@ Map.displayMap = function(userPosition, carPosition)
      // title: 'Your position'
    }); 
    var infoWindowContent = [
-                            "<b>Get Directions</b><br/>",
+                            "",
                             "<form id='map-form'>",
-                            "<input type='submit' id='map-go' value='Go' style='height: 25px; width: 50px; align: left'/>",
+                            "<input type='submit' id='map-go' value='Get Directions >>'/>",
                             "</form>"
                         ].join("");
    
-   var infoWindow = new google.maps.InfoWindow({
+   var infowindow = new google.maps.InfoWindow({
 	    content: infoWindowContent
 	    });
     
    google.maps.event.addListener(marker, 'click', function() {
-	   infoWindow.open(map, marker);
+	   infowindow.open(map, marker);
 	 });
    
    google.maps.event.addListener(infowindow, 'domready', function() {
