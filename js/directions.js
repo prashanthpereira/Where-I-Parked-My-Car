@@ -116,6 +116,6 @@ $('#dir_panel').live("tap", function() {
 
 // Briefly show hint on using instruction tap/zoom
 $('#page-dir').live("pageshow", function() {
-    fadingMsg("Tap any instruction<br/>to see details on map");
+    //fadingMsg("Tap any instruction<br/>to see details on map");
 });
 
