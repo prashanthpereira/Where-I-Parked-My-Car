@@ -42,7 +42,7 @@ Map.displayMap = function(userPosition, carPosition)
    var infoWindowContent = [
                             "",
                             "<form id='map-form'>",
-                            "<input type='submit' id='map-go' value='Get Directions >>'/>",
+                            "<input type='submit' id='map-go' class='clickeventvialive' value='Get Directions >>'/>",
                             "</form>"
                         ].join("");
    
@@ -52,15 +52,13 @@ Map.displayMap = function(userPosition, carPosition)
     
    google.maps.event.addListener(marker, 'click', function() {
 	   infowindow.open(map, marker);
+	   $(".clickeventvialive").bind("click", function (){
+		   $.mobile.changePage('../settings.html');
+		   });
 	 });
    
   
-   google.maps.event.addDomListener(infowindow,'click',(function() {
-       return function() {
-    	   alert('test');
-    	   $.mobile.changePage('settings.html');
-       }
-     }));
+  
 	
    
    // If carLatLng is null means that the function has been called when the
