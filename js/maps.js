@@ -53,7 +53,8 @@ Map.displayMap = function(userPosition, carPosition)
    google.maps.event.addListener(marker, 'click', function() {
 	   infowindow.open(map, marker);
 	   $(".clickeventvialive").bind("click", function (){
-		   $.mobile.changePage('../settings.html');
+		   alert("hello");
+		   //$.mobile.changePage('settings.html');
 		   });
 	 });
    
