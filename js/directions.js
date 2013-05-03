@@ -52,7 +52,7 @@ var toggleval = true; // used for test case: static locations
 $('.refresh').live("tap", function() {
     
             // START: Tracking location with device geolocation
-           if ( navigator.geolocation ) { 
+        /*   if ( navigator.geolocation ) { 
                 fadingMsg('Using device geolocation to get current position.');
                 navigator.geolocation.getCurrentPosition ( 
                     function(position) {
@@ -79,16 +79,16 @@ $('.refresh').live("tap", function() {
                     alert('Unable to get location.');
                 }            
             // END: Tracking location with device geolocation
-
+         	*/
             // START: Tracking location with test lat/long coordinates
             // Toggle between two origins to test refresh, force new route to be calculated
-            /*var position = {};
+            var position = {};
             if (toggleval) {
                 toggleval = false;
-                position = { coords: { latitude: 57.6969943, longitude: 11.9865 } }; // Gothenburg
+                position = { coords: { latitude: 35.777877, longitude: -78.678659 } }; // 2316 Champion Court
             } else {
                 toggleval = true;
-                position = { coords: { latitude: 58.5365967, longitude: 15.0373319 } }; // Motala
+                position = { coords: { latitude: 35.918026, longitude: -78.795795 } }; // 62 TW Alexander Dr
             }
             $('#map_canvas').gmap('displayDirections', 
                 { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
@@ -103,7 +103,7 @@ $('.refresh').live("tap", function() {
                         } else {
                             alert('Unable to get route');
                         }
-                    });*/ 
+                    });
             // END: Tracking location with test lat/long coordinates
     $(this).removeClass($.mobile.activeBtnClass);
     return false;
