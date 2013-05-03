@@ -1,8 +1,8 @@
 var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
 
 // Home page
-/*$('#page-home').live("pageinit", function() {
-	$('#map_square').gmap(
+$('#page-home').live("pageinit", function() {
+/*	$('#map_square').gmap(
 	    { 'center' : mapdata.destination, 
 	      'zoom' : 12, 
 	      'mapTypeControl' : false,
@@ -14,11 +14,20 @@ var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
 	            { 'position': map.getCenter(), 
 	              'animation' : google.maps.Animation.DROP 
 	            });                                                                                                                                                                                                                
-	    });
-    $('#map_square').click( function() { 
+	    });*/
+    /*$('#map_square').click( function() { 
         $.mobile.changePage($('#page-map'), {});
-    });
-});*/
+    });*/
+    
+    $(".clickeventvialive").bind("click", function (){	
+    	alert("in directins.js");
+		   $.mobile.changePage('directions.html');
+		   });
+	 });
+
+
+
+});
 
 function fadingMsg (locMsg) {
     $("<div class='ui-overlay-shadow ui-body-e ui-corner-all fading-msg'>" + locMsg + "</div>")
