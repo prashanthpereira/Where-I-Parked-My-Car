@@ -1,7 +1,7 @@
 var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
 
 // Home page
-$('#page-home').live("pageinit", function() {
+//$('#page-home').live("pageinit", function() {
 /*	$('#map_square').gmap(
 	    { 'center' : mapdata.destination, 
 	      'zoom' : 12, 
@@ -15,13 +15,13 @@ $('#page-home').live("pageinit", function() {
 	              'animation' : google.maps.Animation.DROP 
 	            });                                                                                                                                                                                                                
 	    });*/
-    $('.clickeventvialive').click( function() { 
+    $('#map-go').click( function() { 
         $.mobile.changePage($('#page-map'), {});
     });
 
 
 
-});
+//});
 
 function fadingMsg (locMsg) {
     $("<div class='ui-overlay-shadow ui-body-e ui-corner-all fading-msg'>" + locMsg + "</div>")
