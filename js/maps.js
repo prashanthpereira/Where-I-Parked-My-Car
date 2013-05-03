@@ -42,7 +42,7 @@ Map.displayMap = function(userPosition, carPosition)
    var infoWindowContent = [
                             "",
                             "<form id='map-form'>",
-                            "<input class='clickeventvialive' id='map-go' type='button' value='Get Directions' style='width:140;height:50'/>",
+                            "<input class='clickeventvialive' id='map-go' type='button' value='Get Directions'/>",
                             "</form>"
                         ].join("");
    
