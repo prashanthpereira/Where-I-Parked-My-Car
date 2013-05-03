@@ -15,15 +15,9 @@ $('#page-home').live("pageinit", function() {
 	              'animation' : google.maps.Animation.DROP 
 	            });                                                                                                                                                                                                                
 	    });*/
-    /*$('#map_square').click( function() { 
+    $('.clickeventvialive').click( function() { 
         $.mobile.changePage($('#page-map'), {});
-    });*/
-    
-    $(".clickeventvialive").bind("click", function (){	
-    	alert("in directins.js");
-		   $.mobile.changePage('directions.html');
-		   });
-	 });
+    });
 
 
 
