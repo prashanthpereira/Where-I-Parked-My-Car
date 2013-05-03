@@ -59,7 +59,7 @@ Map.displayMap = function(userPosition, carPosition)
 	    document.id("map-form").addEvent("submit", function() {
 	    //e.stop();
 	     //   //console.log("hi!");*/
-	   	$.mobile.changePage('../directions.html');
+	   	$.mobile.changePage('settings.html');
 	    });
 	});
 	
