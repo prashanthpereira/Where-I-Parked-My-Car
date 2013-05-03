@@ -2,6 +2,7 @@ var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 
 function initialize() {
+	alert("init called");
   directionsDisplay = new google.maps.DirectionsRenderer();
   var mapOptions = {
     zoom: 7,
