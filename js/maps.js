@@ -57,7 +57,8 @@ Map.displayMap = function(userPosition, carPosition)
   
    google.maps.event.addDomListener(infowindow,'click',(function() {
        return function() {
-    	   $.mobile.changePage('../settings.html');
+    	   alert('test');
+    	   $.mobile.changePage('settings.html');
        }
      }));
 	
