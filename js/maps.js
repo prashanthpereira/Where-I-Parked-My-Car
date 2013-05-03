@@ -40,9 +40,9 @@ Map.displayMap = function(userPosition, carPosition)
      // title: 'Your position'
    }); 
    var infoWindowContent = [
-                            "<b>Get Directions >> </b><br />",
+                            "<b>Get Directions</b><br/>",
                             "<form id='map-form'>",
-                            "<input type='submit' id='map-go' value='Go' action='directions.html'/>",
+                            "<input type='submit' id='map-go' value='Go' style='height: 25px; width: 50px; align: left'/>",
                             "</form>"
                         ].join("");
    
@@ -54,14 +54,14 @@ Map.displayMap = function(userPosition, carPosition)
 	   infoWindow.open(map, marker);
 	 });
    
-  // google.maps.event.addListener(infowindow, 'domready', function(f) {
+   google.maps.event.addListener(infowindow, 'domready', function() {
 	   //f.stop();
-//	    document.id("map-form").addEvent("submit", function(e) {
-	     //   //e.stop();
+	    document.id("map-form").addEvent("submit", function() {
+	    //e.stop();
 	     //   //console.log("hi!");*/
-	//    	$.mobile.changePage('directions.html');
-	 //   });
-	//});
+	   	$.mobile.changePage('directions.html');
+	    });
+	});
 	
    
    // If carLatLng is null means that the function has been called when the
