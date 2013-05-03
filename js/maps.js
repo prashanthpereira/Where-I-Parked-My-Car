@@ -42,7 +42,7 @@ Map.displayMap = function(userPosition, carPosition)
    var infoWindowContent = [
                             "",
                             "<form id='map-form'>",
-                            "<input type='button' id='map-go' class='clickeventvialive' value='Get Directions' />",
+                            "<button class='clickeventvialive' type='button' value='Get Directions'><img src='arrow.png' style='vertical-align:right;'/></button>",
                             "</form>"
                         ].join("");
    
@@ -53,7 +53,7 @@ Map.displayMap = function(userPosition, carPosition)
    google.maps.event.addListener(marker, 'click', function() {
 	   infowindow.open(map, marker);
 	   $(".clickeventvialive").bind("click", function (){		  
-		   $.mobile.changePage('settings.html');
+		   $.mobile.changePage('directions.html');
 		   });
 	 });
    
