@@ -40,12 +40,21 @@ function fadingMsg (locMsg) {
 $('#page-map').live("pageinit", function() {
 //	fadingMsg("page-map pageinit");
 	
+	
+
  $('#map_canvas').gmap({'center' : mapdata.destination, 
 	 'zoom': 20,
+	 'zoomControl': true,
+	 'overviewMapControl': true,
+	 'streetViewControl': true,
 	 'mapTypeControl' : true, 
      'navigationControl' : true,
      'navigationControlOptions' : {'position':google.maps.ControlPosition.LEFT_TOP},
-     'mapTypeId': google.maps.MapTypeId.SATELLITE
+     'mapTypeId': google.maps.MapTypeId.SATELLITE,
+     'zoomControlOptions': {
+	          position: google.maps.ControlPosition.TR,
+	        style: google.maps.ZoomControlStyle.SMALL
+	      }
      })
  .bind('init', function() {
      $('.refresh').trigger('tap');        
