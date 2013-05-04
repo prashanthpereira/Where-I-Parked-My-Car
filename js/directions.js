@@ -137,9 +137,15 @@ $('#dir_panel').live("tap", function() {
  $.mobile.changePage($('#page-map'), {});
 });
 
+$('#directions-image').live("tap", function() {
+	 $.mobile.changePage($('#page-map'), {});
+	});
+
+
 $('.directions').live("tap", function() {
 	 $.mobile.changePage("directions2.html");
 	});
+
 
 //Briefly show hint on using instruction tap/zoom
 $('#page-dir').live("pageshow", function() {
