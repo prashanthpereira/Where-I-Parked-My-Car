@@ -37,7 +37,6 @@ Map.displayMap = function(userPosition, carPosition)
    var marker = new google.maps.Marker({
       position: userLatLng,
       map: map
-     // title: 'Your position'
    }); 
    var infoWindowContent = [
                             "",
@@ -51,12 +50,8 @@ Map.displayMap = function(userPosition, carPosition)
 	    });
    google.maps.event.addListener(marker, 'click', function() {
 	   infowindow.open(map, marker);
-	  /* $('#map-go').click( function() { 
-	        $.mobile.changePage($('#page-map'), {});
-	    });*/
 	   $(".clickeventvialive").bind("click", function (){		  
 			   $.mobile.changePage('directions.html');
-			  //$.mobile.changePage($('#page-map'), {});
 			   });
 	 });
 
@@ -68,8 +63,49 @@ Map.displayMap = function(userPosition, carPosition)
    else
       marker.setIcon('images/user-marker.png');
    //CREATE TEST MARKERS ---------------------------------
+   var carLatLng1 = new google.maps.LatLng(35.778046,-78.679448);
+   var marker1 = new google.maps.Marker({
+	      position: carLatLng1,
+	      map: map,
+	      icon: 'images/red.png'}); 
+   google.maps.event.addListener(marker1, 'click', function() {
+	   infowindow.open(map, marker1);
+	   $(".clickeventvialive").bind("click", function (){		  
+			   $.mobile.changePage('directions.html');
+			   });});
    
+   var carLatLng2 = new google.maps.LatLng(35.777556,-78.678955);
+   var marker2 = new google.maps.Marker({
+	      position: carLatLng2,
+	      map: map,
+	      icon: 'images/red.png'}); 
+   google.maps.event.addListener(marker2, 'click', function() {
+	   infowindow.open(map, marker2);
+	   $(".clickeventvialive").bind("click", function (){		  
+			   $.mobile.changePage('directions.html');
+			   });});
    
+   var carLatLng3 = new google.maps.LatLng(35.777994,-78.679222);
+   var marker3 = new google.maps.Marker({
+	      position: carLatLng3,
+	      map: map,
+	      icon: 'images/red.png'}); 
+   google.maps.event.addListener(marker3, 'click', function() {
+	   infowindow.open(map, marker3);
+	   $(".clickeventvialive").bind("click", function (){		  
+			   $.mobile.changePage('directions.html');
+			   });});
+   
+   var carLatLng4 = new google.maps.LatLng(35.77804,-78.679452);
+   var marker4 = new google.maps.Marker({
+	      position: carLatLng4,
+	      map: map,
+	      icon: 'images/red.png'}); 
+   google.maps.event.addListener(marker4, 'click', function() {
+	   infowindow.open(map, marker4);
+	   $(".clickeventvialive").bind("click", function (){		  
+			   $.mobile.changePage('directions.html');
+			   });});
    
    //--------------------------------------------------
    var circle = new google.maps.Circle({
