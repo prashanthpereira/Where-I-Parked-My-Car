@@ -14,9 +14,12 @@ Map.displayMap = function(userPosition, carPosition)
       userLatLng = new google.maps.LatLng(userPosition.coords.latitude, userPosition.coords.longitude);
    if (carPosition != null)
       carLatLng = new google.maps.LatLng(carPosition.position.latitude, carPosition.position.longitude);
-
+   var zoom = 10;
+   if (requestType == 'set'){ 
+	   zoom = 20;
+   }
    var options = {
-      zoom: 20,
+      zoom: zoom,
       disableDefaultUI: true,
       panControl: false,
       zoomControl: true,
@@ -62,7 +65,7 @@ Map.displayMap = function(userPosition, carPosition)
    if (carLatLng == null)
       marker.setIcon('images/car-marker.png');
    else
-      marker.setIcon('images/user-marker.png');
+      marker.setIcon('images/user-marker1.png');
    //CREATE TEST MARKERS only for requestType = set---------------------------------
    if (requestType == 'set'){
    var carLatLng1 = new google.maps.LatLng(35.778046,-78.679448);
