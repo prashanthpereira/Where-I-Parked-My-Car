@@ -114,7 +114,8 @@ $('.refresh').live("tap", function() {
  return false;
 });
 
-$('#directions-button').live("tap", function() {
+$('.directions').live("tap", function() {
+	 fadingMsg("Inside directions event");
 	 $.mobile.changePage($('#page-dir'), {});
 });
 
