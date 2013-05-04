@@ -14,9 +14,9 @@ Map.displayMap = function(userPosition, carPosition)
       userLatLng = new google.maps.LatLng(userPosition.coords.latitude, userPosition.coords.longitude);
    if (carPosition != null)
       carLatLng = new google.maps.LatLng(carPosition.position.latitude, carPosition.position.longitude);
-   var zoom = 10;
-   if (requestType == 'set'){ 
-	   zoom = 20;
+   var zoom = 20;
+   if (requestType != 'set'){ 
+	   zoom = 10;
    }
    var options = {
       zoom: zoom,
@@ -124,7 +124,7 @@ Map.displayMap = function(userPosition, carPosition)
 			   });});
    }
    //--------------------------------------------------
-   var circle = new google.maps.Circle({
+   /*var circle = new google.maps.Circle({
       center: userLatLng,
       radius: userPosition.coords.accuracy,
       map: map,
@@ -133,7 +133,7 @@ Map.displayMap = function(userPosition, carPosition)
       strokeColor: '#FFFFFF',
       strokeOpacity: 1.0
    });
-   map.fitBounds(circle.getBounds());
+   map.fitBounds(circle.getBounds());*/
 
    if (carLatLng != null)
    {
