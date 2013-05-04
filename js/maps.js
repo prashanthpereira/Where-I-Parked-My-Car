@@ -107,6 +107,17 @@ Map.displayMap = function(userPosition, carPosition)
 			   $.mobile.changePage('directions.html');
 			   });});
    
+   var carLatLng5 = new google.maps.LatLng(35.777843,-78.679065);
+   var marker5 = new google.maps.Marker({
+	      position: carLatLng5,
+	      map: map,
+	      icon: 'images/red.png'}); 
+   google.maps.event.addListener(marker5, 'click', function() {
+	   infowindow.open(map, marker5);
+	   $(".clickeventvialive").bind("click", function (){		  
+			   $.mobile.changePage('directions.html');
+			   });});
+   
    //--------------------------------------------------
    var circle = new google.maps.Circle({
       center: userLatLng,
