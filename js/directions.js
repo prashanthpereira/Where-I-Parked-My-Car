@@ -114,9 +114,9 @@ $('.refresh').live("tap", function() {
  return false;
 });
 
-$('.directions').live("tap", function() {
+$('#directions-button').live("tap", function() {
 	 $.mobile.changePage($('#page-dir'), {});
-}
+});
 
 //Go to map page to see instruction detail (zoom) on map page
 $('#dir_panel').live("tap", function() {

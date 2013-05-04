@@ -67,6 +67,11 @@ Map.displayMap = function(userPosition, carPosition)
       marker.setIcon('images/car-marker.png');
    else
       marker.setIcon('images/user-marker.png');
+   //CREATE TEST MARKERS ---------------------------------
+   
+   
+   
+   //--------------------------------------------------
    var circle = new google.maps.Circle({
       center: userLatLng,
       radius: userPosition.coords.accuracy,
