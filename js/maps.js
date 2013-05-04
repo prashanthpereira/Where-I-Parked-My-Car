@@ -55,7 +55,7 @@ Map.displayMap = function(userPosition, carPosition)
 			   });
 	 });
 
-   fadingMsg("Searching for available parking spots");
+   //fadingMsg("Searching");
    // If carLatLng is null means that the function has been called when the
    // user set his current position and that is when he parked the car so the
    // icon will be shown accordingly.
