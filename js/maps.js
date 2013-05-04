@@ -9,7 +9,7 @@ Map.displayMap = function(userPosition, carPosition)
 {
    var userLatLng = null;
    var carLatLng = null;
-
+   var requestType = urlParam('requestType');
    if (userPosition != null)
       userLatLng = new google.maps.LatLng(userPosition.coords.latitude, userPosition.coords.longitude);
    if (carPosition != null)
@@ -41,7 +41,7 @@ Map.displayMap = function(userPosition, carPosition)
    var infoWindowContent = [
                             "",
                             "<form id='map-form'>",
-                            "<input class='clickeventvialive' id='map-go' type='button' value='Get Directions'/>",
+                            "<input class='clickeventvialive' id='map-go' type='button' style='width:100px;' value='Get Directions'/>",
                             "</form>"
                         ].join("");
    
@@ -63,7 +63,8 @@ Map.displayMap = function(userPosition, carPosition)
       marker.setIcon('images/car-marker.png');
    else
       marker.setIcon('images/user-marker.png');
-   //CREATE TEST MARKERS ---------------------------------
+   //CREATE TEST MARKERS only for requestType = set---------------------------------
+   if (requestType == 'set'){
    var carLatLng1 = new google.maps.LatLng(35.778046,-78.679448);
    var marker1 = new google.maps.Marker({
 	      position: carLatLng1,
@@ -118,7 +119,7 @@ Map.displayMap = function(userPosition, carPosition)
 	   $(".clickeventvialive").bind("click", function (){		  
 			   $.mobile.changePage('directions.html');
 			   });});
-   
+   }
    //--------------------------------------------------
    var circle = new google.maps.Circle({
       center: userLatLng,
