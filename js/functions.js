@@ -70,15 +70,13 @@ function initApplication()
          };
          var position = new Position();
 
-         //$.mobile.loading('show');
-         // If the parameter requestType is 'set', the user wants to set
-         // his car position else he want to retrieve the position
+         
          if (requestType == 'set')
          {
             navigator.geolocation.getCurrentPosition(
                function(location)
                {
-                  // Save the position in the history log
+                  // 
                   position.savePosition(
                      new Coords(
                         location.coords.latitude,
@@ -86,14 +84,10 @@ function initApplication()
                         location.coords.accuracy
                      )
                   );
-                  // Update the saved position to set the address name
+                  // 
                   Map.requestLocation(location);
                   Map.displayMap(location, null);
-                  /*navigator.notification.alert(
-                     'Your position has been saved',
-                     function(){},
-                     'Info'
-                  );*/
+                  
                },
                function(error)
                {
@@ -126,9 +120,7 @@ function initApplication()
                navigator.geolocation.watchPosition(
                   function(location)
                   {
-                     // If positionIndex parameter isn't set, the user wants to retrieve
-                     // the last saved position. Otherwise he accessed the map page
-                     // from the history page, so he wants to see an old position
+                     
                      if (positionIndex == undefined)
                         Map.displayMap(location, position.getPositions()[0]);
                      else

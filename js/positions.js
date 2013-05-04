@@ -29,7 +29,7 @@ function Position(position, address, datetime)
          positions = [];
 
       positions.unshift(new Position(position, address, new Date()));
-      // Only the top MAX_POSITIONS results are needed
+      
       if (positions.length > this.MAX_POSITIONS)
          positions = positions.slice(0, this.MAX_POSITIONS);
 

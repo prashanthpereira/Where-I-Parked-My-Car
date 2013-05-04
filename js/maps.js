@@ -2,9 +2,7 @@ function Map()
 {
 }
 
-/**
- * Display the map showing the user position or the latter and the car position
- */
+
 Map.displayMap = function(userPosition, carPosition)
 {
    var userLatLng = null;
@@ -58,10 +56,7 @@ Map.displayMap = function(userPosition, carPosition)
 			   });
 	 });
 
-   //fadingMsg("Searching");
-   // If carLatLng is null means that the function has been called when the
-   // user set his current position and that is when he parked the car so the
-   // icon will be shown accordingly.
+   
    if (carLatLng == null)
       marker.setIcon('images/car-marker.png');
    else
@@ -145,17 +140,7 @@ Map.displayMap = function(userPosition, carPosition)
          icon: 'images/car-marker.png',
          title: 'Car position'
       });
-      /*circle = new google.maps.Circle({
-         center: carLatLng,
-         radius: carPosition.position.accuracy,
-         map: map,
-         fillColor: '#70E7FF',
-         fillOpacity: 0.1,
-         strokeColor: '#FFFFFF',
-         strokeOpacity: 1.0
-      });*/
-
-      // Display route to the car
+      
       options = {
          suppressMarkers: true,
          map: map,
@@ -170,7 +155,7 @@ Map.displayMap = function(userPosition, carPosition)
       this.setRoute(new google.maps.DirectionsRenderer(options), userLatLng, carLatLng);
    }
 
-   //$.mobile.loading('hide');
+
 }
 
 /**

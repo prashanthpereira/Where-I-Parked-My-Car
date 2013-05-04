@@ -18,9 +18,5 @@
    <preference name="phonegap-version" value="2.0.0" />
    <preference name="target-device" value="universal" />
 
-   <!-- Splash Screens -->
-   <!-- <gap:splash src="splash1.png" />
-   <gap:splash src="images/splash1-160x220.png" gap:platform="android" gap:density="ldpi" />
-   <gap:splash src="images/splash1-220x330.png" gap:platform="android" gap:density="mdpi" />
-   <gap:splash src="images/splash1-450x650.png" gap:platform="android" gap:density="hdpi" /> -->
+   
 </widget>
