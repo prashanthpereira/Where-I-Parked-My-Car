@@ -96,14 +96,36 @@ $('.refresh').live("tap", function() {
              position = { coords: { latitude: 35.777556, longitude: -78.678955 } }; // 2320 Champion Court
          }
          
-         $('#map_canvas').gmap('displayDirections', { 'origin': 'Los Angeles, USA', 'destination': 'New York, USA',
+         var directionsRenderer = new google.maps.DirectionsRenderer();  
+         var map = new google.maps.Map(document.getElementById('map');
+         directionsRenderer.setMap(map);
+        
+         directionsRenderer.setPanel(document.getElementById('dir_panel'));
+         
+         var directionsService = new google.maps.DirectionsService();  
+         var request = {  
+           origin: new google.maps.LatLng(35.918026,-78.795795),   
+           destination: mapdata.destination,         
+           travelMode: google.maps.DirectionsTravelMode.DRIVING,  
+           unitSystem: google.maps.DirectionsUnitSystem.METRIC
+         };  
+         
+         directionsService.route(request, function(response, status) {  
+           if (status == google.maps.DirectionsStatus.OK) {  
+             directionsRenderer.setDirections(response);  
+           } else {  
+             alert('Error: ' + status);  
+           }  
+         });  
+         
+         /*$('#map_canvas').gmap('displayDirections', { 'origin': 'Los Angeles, USA', 'destination': 'New York, USA',
         	 'travelMode': google.maps.DirectionsTravelMode.DRIVING },
         	 { 'panel': document.getElementById('panel') }, 
         	 function(result, status) {
              if ( status === 'OK' ) {
                      alert('Results found!');
              }
-         });
+         });*/
          
         /* $('#map_canvas').gmap('displayDirections', 
              { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
