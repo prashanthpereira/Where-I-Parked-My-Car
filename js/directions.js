@@ -105,6 +105,7 @@ $('.refresh').live("tap", function() {
                          var center = result.routes[0].bounds.getCenter();
                          $('#map_canvas').gmap('option', 'center', center);
                          $('#map_canvas').gmap('refresh');
+                         $("#result").show();
                      } else {
                          alert('Unable to get route');
                      }
@@ -122,7 +123,7 @@ $('#dir_panel').live("tap", function() {
 });
 
 //Briefly show hint on using instruction tap/zoom
-$('#page-dir').live("pageshow", function() {
+/*$('#page-dir').live("pageshow", function() {
  fadingMsg("Tap any instruction<br/>to see details on map");
-});
+});*/
 
