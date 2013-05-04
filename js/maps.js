@@ -126,16 +126,16 @@ Map.displayMap = function(userPosition, carPosition)
 			   });});
    }
    //--------------------------------------------------
-   /*var circle = new google.maps.Circle({
+   var circle = new google.maps.Circle({
       center: userLatLng,
       radius: userPosition.coords.accuracy,
       map: map,
       fillColor: '#70E7FF',
-      fillOpacity: 0.1,
+      fillOpacity: 0.05,
       strokeColor: '#FFFFFF',
-      strokeOpacity: 1.0
+      strokeOpacity: 0.4
    });
-   map.fitBounds(circle.getBounds());*/
+   map.fitBounds(circle.getBounds());
 
    if (carLatLng != null)
    {
@@ -145,7 +145,7 @@ Map.displayMap = function(userPosition, carPosition)
          icon: 'images/car-marker.png',
          title: 'Car position'
       });
-      circle = new google.maps.Circle({
+      /*circle = new google.maps.Circle({
          center: carLatLng,
          radius: carPosition.position.accuracy,
          map: map,
@@ -153,7 +153,7 @@ Map.displayMap = function(userPosition, carPosition)
          fillOpacity: 0.1,
          strokeColor: '#FFFFFF',
          strokeOpacity: 1.0
-      });
+      });*/
 
       // Display route to the car
       options = {
