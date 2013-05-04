@@ -98,14 +98,14 @@ $('.refresh').live("tap", function() {
              { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
                'destination' : mapdata.destination, 
                'travelMode' : google.maps.DirectionsTravelMode.DRIVING },
-               { 'panel' : document.getElementById('dir-content') },
+               { 'panel' : document.getElementById('dir_panel') },
                  function (result, status) {
                      if (status === 'OK') {
                     	 fadingMsg("status = OK");
                          var center = result.routes[0].bounds.getCenter();
                          $('#map_canvas').gmap('option', 'center', center);
                          $('#map_canvas').gmap('refresh');
-                         $("#result").show();
+                         
                      } else {
                          alert('Unable to get route');
                      }
@@ -126,6 +126,6 @@ $('#dir_panel').live("tap", function() {
 $('#page-dir').live("pageshow", function() {
 	
  fadingMsg("Tap any instruction<br/>to see details on map");
- $.mobile.changePage($('#page-dir'), {});
+ //$.mobile.changePage($('#page-dir'), {});
 });
 
