@@ -55,6 +55,7 @@ Map.displayMap = function(userPosition, carPosition)
 			   });
 	 });
 
+   fadingMsg("Searching for available parking spots...");
    // If carLatLng is null means that the function has been called when the
    // user set his current position and that is when he parked the car so the
    // icon will be shown accordingly.
@@ -190,6 +191,16 @@ Map.setRoute = function(directionsDisplay, userLatLng, carLatLng)
       }
    );
 }
+
+function fadingMsg (locMsg) {
+	 $("<div class='ui-overlay-shadow ui-body-e ui-corner-all fading-msg'>" + locMsg + "</div>")
+	 .css({ "display": "block", "opacity": 0.9, "top": $(window).scrollTop() + 100 })
+	 .appendTo( $.mobile.pageContainer )
+	 .delay( 2200 )
+	 .fadeOut( 1000, function(){
+	     $(this).remove();
+	});
+	}
 
 /**
  * Request the address of the retrieved location

@@ -89,11 +89,11 @@ function initApplication()
                   // Update the saved position to set the address name
                   Map.requestLocation(location);
                   Map.displayMap(location, null);
-                  navigator.notification.alert(
+                  /*navigator.notification.alert(
                      'Your position has been saved',
                      function(){},
                      'Info'
-                  );
+                  );*/
                },
                function(error)
                {
@@ -221,7 +221,7 @@ function createPositionsHistoryList(idElement, positions)
             else
             {
                navigator.notification.alert(
-                  'Position not deleted. Something gone wrong so please try again.',
+                  'Position not deleted. Please try again.',
                   function(){},
                   'Error'
                );
