@@ -128,6 +128,5 @@ $('#dir_panel').live("tap", function() {
 $('#page-dir').live("pageshow", function() {
 	
  fadingMsg("Tap any instruction<br/>to see details on map");
- $.mobile.changePage($('#page-dir'), {});
 });
 
