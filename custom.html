@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Custom Search</title>
+   </head>
+   <body>
+      <div id="settings-page" data-role="page">
+         <header data-role="header">
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
+            <h1>Custom Search</h1>
+         </header>
+         <div id="content" data-role="content">
+            
+             
+			<fieldset data-role="controlgroup">
+				<legend>Search parking spots based on</legend>
+				<input type="radio" name="radio-choice" id="radio-choice-1"
+					value="choice-1" checked="checked" /> <label for="radio-choice-1">address</label>
+
+				<input type="radio" name="radio-choice" id="radio-choice-2"
+					value="choice-2" /> <label for="radio-choice-2">zipcode</label>
+
+
+			</fieldset>
+			<br>
+    		<br>
+    		<input type="text" name="name" id="basic" value="" placeholder="Enter address or zipcode"  />
+    		<br>
+    		<br>
+    		<a href="map.html?requestType=quick" id="quick-search" style="font-size: 15pt; height:70px; line-height:70px; text-overflow: initial;vertical-align: middle" data-role="button">Search</a>
+    		
+    		
+    		
+    		
+         </div>
+
+      </div>
+   </body>
+</html>
