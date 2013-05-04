@@ -131,7 +131,7 @@ Map.displayMap = function(userPosition, carPosition)
       radius: userPosition.coords.accuracy,
       map: map,
       fillColor: '#70E7FF',
-      fillOpacity: 0.05,
+      fillOpacity: 0.1,
       strokeColor: '#FFFFFF',
       strokeOpacity: 0.4
    });
