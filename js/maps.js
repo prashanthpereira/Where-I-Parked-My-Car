@@ -161,6 +161,12 @@ Map.displayMap = function(userPosition, carPosition)
          map: map,
          preserveViewport: true
       }
+      google.maps.event.addListener(marker, 'click', function() {
+   	   infowindow.open(map, marker);
+   	   $(".clickeventvialive").bind("click", function (){		  
+   			   $.mobile.changePage('directions.html');
+   			   });
+   	 });
       this.setRoute(new google.maps.DirectionsRenderer(options), userLatLng, carLatLng);
    }
 
