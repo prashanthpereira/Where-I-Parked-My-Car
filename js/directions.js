@@ -99,9 +99,10 @@ $('.refresh').live("tap", function() {
              { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
                'destination' : mapdata.destination, 
                'travelMode' : google.maps.DirectionsTravelMode.DRIVING },
-                'panel' : document.getElementById('dir_panel') ,
+               { 'panel' : document.getElementById('dir_panel') },
                  function (result, status) {
                      if (status === 'OK') {
+                    	 document.getElementById('dir_panel').setDirections(result);
                     	// fadingMsg("status = OK");
                          var center = result.routes[0].bounds.getCenter();
                          $('#map_canvas').gmap('option', 'center', center);
@@ -124,9 +125,9 @@ $('#dir_panel').live("tap", function() {
 });
 
 //Briefly show hint on using instruction tap/zoom
-$('.directions').live("tap", function() {
-	$.mobile.changePage($('#page-dir'), {});	
+$('#page-dir').live("pageshow", function() {
+	
  fadingMsg("Tap any instruction<br/>to see details on map");
- 
+ $.mobile.changePage($('#page-dir'), {});
 });
 
