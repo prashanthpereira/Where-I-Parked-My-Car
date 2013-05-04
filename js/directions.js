@@ -95,14 +95,24 @@ $('.refresh').live("tap", function() {
              toggleval = true;
              position = { coords: { latitude: 35.777556, longitude: -78.678955 } }; // 2320 Champion Court
          }
-         $('#map_canvas').gmap('displayDirections', 
+         
+         $('#map_canvas').gmap('displayDirections', { 'origin': 'Los Angeles, USA', 'destination': 'New York, USA',
+        	 'travelMode': google.maps.DirectionsTravelMode.DRIVING },
+        	 { 'panel': document.getElementById('panel') }, 
+        	 function(result, status) {
+             if ( status === 'OK' ) {
+                     alert('Results found!');
+             }
+         });
+         
+        /* $('#map_canvas').gmap('displayDirections', 
              { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
                'destination' : mapdata.destination, 
                'travelMode' : google.maps.DirectionsTravelMode.DRIVING },
                { 'panel' : document.getElementById('dir_panel') },
                  function (result, status) {
                      if (status === 'OK') {
-                    	 document.getElementById('dir_panel').setDirections(result);
+                    	 //document.getElementById('dir_panel').setDirections(result);
                     	// fadingMsg("status = OK");
                          var center = result.routes[0].bounds.getCenter();
                          $('#map_canvas').gmap('option', 'center', center);
@@ -111,7 +121,7 @@ $('.refresh').live("tap", function() {
                      } else {
                          alert('Unable to get route');
                      }
-                 }); 
+                 }); */
          // END: Tracking location with test lat/long coordinates
  $(this).removeClass($.mobile.activeBtnClass);
  return false;
