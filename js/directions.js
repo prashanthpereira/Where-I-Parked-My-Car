@@ -98,7 +98,7 @@ $('.refresh').live("tap", function() {
              { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
                'destination' : mapdata.destination, 
                'travelMode' : google.maps.DirectionsTravelMode.DRIVING },
-               { 'panel' : document.getElementById('dir_panel') },
+               { 'panel' : document.getElementById('dir_content') },
                  function (result, status) {
                      if (status === 'OK') {
                     	 fadingMsg("status = OK");
