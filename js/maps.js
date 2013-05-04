@@ -68,6 +68,8 @@ Map.displayMap = function(userPosition, carPosition)
       marker.setIcon('images/user-marker1.png');
    //CREATE TEST MARKERS only for requestType = set---------------------------------
    if (requestType != 'set'){
+   }
+   else{
    var carLatLng1 = new google.maps.LatLng(35.778046,-78.679448);
    var marker1 = new google.maps.Marker({
 	      position: carLatLng1,
