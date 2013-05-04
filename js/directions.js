@@ -1,4 +1,7 @@
-var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };
+//var mapdata = { destination: new google.maps.LatLng(35.918026,-78.795795) };  //62 TW Alexander Dr
+
+var mapdata = { destination: new google.maps.LatLng(35.778046,-78.679448) };  //CC
+
 
 
 //Home page
@@ -89,14 +92,14 @@ $('.refresh').live("tap", function() {
          // START: Tracking location with test lat/long coordinates
          // Toggle between two origins to test refresh, force new route to be calculated
          var position = {};
-         if (toggleval) {
-             toggleval = false;
+         //if (toggleval) {
+           //  toggleval = false;
              position = { coords: { latitude: 35.773188, longitude: -78.683395 } };  // Avent Ferry road
             
-         } else {
-             toggleval = true;
-             position = { coords: { latitude: 35.773188, longitude: -78.683395 } }; // 2320 Champion Court
-         }
+         //} else {
+          //   toggleval = true;
+           //  position = { coords: { latitude: 35.773188, longitude: -78.683395 } }; // 
+         //}
          
          
          /*$('#map_canvas').gmap('displayDirections', { 'origin': 'Los Angeles, USA', 'destination': 'New York, USA',
@@ -138,7 +141,7 @@ $('#dir_panel').live("tap", function() {
 });
 
 $('#directions-image').live("tap", function() {
-	 $.mobile.changePage($('#page-map'), {});
+	$.mobile.changePage("directions.html");
 	});
 
 
