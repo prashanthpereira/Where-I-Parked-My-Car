@@ -89,19 +89,20 @@ $('.refresh').live("tap", function() {
          var position = {};
          if (toggleval) {
              toggleval = false;
-             position = { coords: { latitude: 35.777556, longitude: -78.678955 } }; // 2320 Champion Court
+             position = { coords: { latitude: 35.918026, longitude: -78.795795 } }; // 62 TW Alexander Dr
+             
          } else {
              toggleval = true;
-             position = { coords: { latitude: 35.918026, longitude: -78.795795 } }; // 62 TW Alexander Dr
+             position = { coords: { latitude: 35.777556, longitude: -78.678955 } }; // 2320 Champion Court
          }
          $('#map_canvas').gmap('displayDirections', 
              { 'origin' : new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
                'destination' : mapdata.destination, 
                'travelMode' : google.maps.DirectionsTravelMode.DRIVING },
-               { 'panel' : document.getElementById('dir_panel') },
+                'panel' : document.getElementById('dir_panel') ,
                  function (result, status) {
                      if (status === 'OK') {
-                    	 fadingMsg("status = OK");
+                    	// fadingMsg("status = OK");
                          var center = result.routes[0].bounds.getCenter();
                          $('#map_canvas').gmap('option', 'center', center);
                          $('#map_canvas').gmap('refresh');
@@ -123,9 +124,9 @@ $('#dir_panel').live("tap", function() {
 });
 
 //Briefly show hint on using instruction tap/zoom
-$('#page-dir').live("pageshow", function() {
-	
+$('.directions').live("tap", function() {
+	$.mobile.changePage($('#page-dir'), {});	
  fadingMsg("Tap any instruction<br/>to see details on map");
- //$.mobile.changePage($('#page-dir'), {});
+ 
 });
 
