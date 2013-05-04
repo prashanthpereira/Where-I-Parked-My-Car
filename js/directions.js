@@ -40,7 +40,8 @@ $('#page-map').live("pageinit", function() {
  $('#map_canvas').gmap({'center' : mapdata.destination, 
      'mapTypeControl' : true, 
      'navigationControl' : true,
-     'navigationControlOptions' : {'position':google.maps.ControlPosition.LEFT_TOP}
+     'navigationControlOptions' : {'position':google.maps.ControlPosition.LEFT_TOP},
+     'mapTypeId': google.maps.MapTypeId.SATELLITE
      })
  .bind('init', function() {
      $('.refresh').trigger('tap');        
