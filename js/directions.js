@@ -89,7 +89,7 @@ $('.refresh').live("tap", function() {
          var position = {};
          if (toggleval) {
              toggleval = false;
-             position = { coords: { latitude: 35.777877, longitude: -78.678659 } }; // 2316 Champion Court
+             position = { coords: { latitude: 35.777556, longitude: -78.678955 } }; // 2320 Champion Court
          } else {
              toggleval = true;
              position = { coords: { latitude: 35.918026, longitude: -78.795795 } }; // 62 TW Alexander Dr
