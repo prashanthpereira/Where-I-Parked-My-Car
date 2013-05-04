@@ -38,7 +38,8 @@ $('#page-map').live("pageinit", function() {
 //	fadingMsg("page-map pageinit");
 	
  $('#map_canvas').gmap({'center' : mapdata.destination, 
-     'mapTypeControl' : true, 
+	 'zoom': 20,
+	 'mapTypeControl' : true, 
      'navigationControl' : true,
      'navigationControlOptions' : {'position':google.maps.ControlPosition.LEFT_TOP},
      'mapTypeId': google.maps.MapTypeId.SATELLITE
@@ -90,11 +91,11 @@ $('.refresh').live("tap", function() {
          var position = {};
          if (toggleval) {
              toggleval = false;
-             position = { coords: { latitude: 35.918026, longitude: -78.795795 } }; // 62 TW Alexander Dr
-             
+             position = { coords: { latitude: 35.773188, longitude: -78.683395 } };  // Avent Ferry road
+            
          } else {
              toggleval = true;
-             position = { coords: { latitude: 35.777556, longitude: -78.678955 } }; // 2320 Champion Court
+             position = { coords: { latitude: 35.773188, longitude: -78.683395 } }; // 2320 Champion Court
          }
          
          
